@@ -1,0 +1,34 @@
+$font-stack: 'Montserrat',
+sans-serif;
+$primary-color: #22252a;
+$secondary-color: #e50d20;
+$portolio-text-color: #FFF;
+
+@mixin  easeOut {
+    transition: all ease-out 0.5s;
+}
+
+//Media query mixins
+@mixin mediaSm {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin mediaMd {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mediaLg {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        @content;
+    }
+}
+
+@mixin mediaXL {
+    @media screen and (min-width: 1171px) {
+        @content;
+    }
+}
