@@ -1,8 +1,8 @@
-$font-stack: 'Montserrat',
-sans-serif;
-$primary-color: #22252a;
-$secondary-color: #e50d20;
-$portolio-text-color: #FFF;
+$main-black: #1F202B;
+$main-gray: #8A8CA5;
+$light-gray: #E7E7E8;
+$main-blue: #5952FF;
+
 
 @mixin  easeOut {
     transition: all ease-out 0.5s;
@@ -10,25 +10,31 @@ $portolio-text-color: #FFF;
 
 //Media query mixins
 @mixin mediaSm {
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 39.9375em) {
         @content;
     }
 }
 
 @mixin mediaMd {
-    @media screen and (max-width: 768px) {
+    @media screen and (min-width: 40em) {
+        @content;
+    }
+}
+
+@mixin mediaMdOnly {
+    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
         @content;
     }
 }
 
 @mixin mediaLg {
-    @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @media screen and (min-width: 64em) {
         @content;
     }
 }
 
-@mixin mediaXL {
-    @media screen and (min-width: 1171px) {
+@mixin mediaLgOnly {
+    @media screen and (min-width: 64em) and (max-width: 74.9375em) {
         @content;
     }
 }

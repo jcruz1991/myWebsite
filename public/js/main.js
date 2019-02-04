@@ -1,43 +1,43 @@
 $(document).ready(function () {
+    const btnLoad = document.getElementById('btn-load');
+    const btnSend = document.getElementById('btn-send');
 
-    particlesJS.load('particles-js', '../assets/particles.json', function () {
-        console.log('particles loaded');
+    btnLoad.addEventListener('click', function () {
+        console.log('bnt-load clicked');
     });
 
-    const menuBtn = document.querySelector('.menu-btn');
-    const menu = document.querySelector('.menu');
-    const menuNav = document.querySelector('.menu-nav');
-    const menuBranding = document.querySelector('.menu-branding');
-    const navItems = document.querySelectorAll('.nav-item');
+    btnSend.addEventListener('click', function () {
+        console.log('bnt-send clicked');
+    });
 
-
-    //set initial state of menu
-    let showMenu = false;
-
-    menuBtn.addEventListener('click', function() {
-        //toggle Menu
-        if(!showMenu) {
-            menuBtn.classList.add('close');
-            menu.classList.add('show');
-            menuNav.classList.add('show');
-            menuBranding.classList.add('show');
-            navItems.forEach(item => {
-                item.classList.add('show');
+    $.ajax({
+        type: 'GET',
+        url: '/work',
+        success: function (items) {
+            items.forEach((item) => {
+                constructItem(item);
             });
 
-            // set menu state
-            showMenu = true;
-        } else {
-            menuBtn.classList.remove('close');
-            menu.classList.remove('show');
-            menuNav.classList.remove('show');
-            menuBranding.classList.remove('show');
-            navItems.forEach(item => {
-                item.classList.remove('show');
-            });
-
-            // set menu state
-            showMenu = false;
         }
     });
+
+    function constructItem(item) {
+        $('.work-portfolio-container').append(
+            `
+            <div class="item">
+                <div class="item-image">
+                    <img src="${item.image}"/>
+                </div>
+                <div class="item-content">
+                    <h2 class="item-content-header">${item.header}</h2>
+                    <p class="item-content-text">${item.text}.</p>
+                    <div class="item-content-buttons">
+                        <a href="#"><button class="btn-visit">Visit Site</button></a>
+                        <a href="#"><button class="btn-git">Github <i class="fab fa-github"></i></button></a>
+                    </div>
+                </div>
+          </div>`
+        );
+        console.log(item);
+    }
 });
