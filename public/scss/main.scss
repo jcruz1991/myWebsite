@@ -3,6 +3,7 @@
 @import 'config';
 @import 'nav';
 @import 'landing';
+@import 'about';
 @import 'section2';
 @import 'work';
 @import 'contact';
@@ -27,11 +28,20 @@ body {
     height: 100%;
     overflow-x: hidden;
 }
+
 section {
     @include flexbox();
     @include flex-wrap(wrap);
     margin-bottom: 60px;
     margin-top: 300px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    letter-spacing: 2px;
 }
 
 h1 {
@@ -164,8 +174,36 @@ button {
     }
 }
 
-
+/**
+ * ----------------------------------------
+ * Small devices media query
+ * ----------------------------------------
+ */
 @include mediaSm {
+
+    h1 {
+        @include font-size(32px);
+        font-weight: 900;
+        color: $main-black;
+    }
+
+    h2 {
+        @include font-size(28px);
+        font-weight: 900;
+        color: $main-black;
+    }
+
+    p {
+        @include font-size(16px);
+        color: $main-gray;
+    }
+
+    a {
+        @include font-size(16px);
+        color: $main-gray;
+        text-decoration: none;
+    }
+
     section {
         @include flex-direction(column);
     }

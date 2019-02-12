@@ -15,10 +15,10 @@ gulp.task('css', function () {
         .pipe(uglifycss({
             "uglyComments": true
         }))
-        .pipe(gulp.dest('./public/css'));
+        .pipe(gulp.dest('./public/css/'));
 });
 
-gulp.task('sass:watch', function () {
+gulp.task('watch:sass', function () {
     gulp.watch('./public/scss/**/*.scss', ['sass']);
 });
 

@@ -9,10 +9,8 @@ require('dotenv').config();
 
 const PORT = process.env.PORT || 3001;
 
-
+// Add work folder
 const work = require('./assets/work');
-
-console.log(work);
 
 // Express App Init
 const app = express();
