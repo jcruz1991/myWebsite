@@ -1,0 +1,146 @@
+.landing {
+    margin: 124px 0;
+    h1,
+    .rec-large {
+        @include animation(text-focus-in 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both);
+    }
+
+    h1 {
+        color: #FFFFFF;
+        @include font-size(54px);
+        position: absolute;
+        text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;  
+        left: 62px;
+    }
+}
+
+.skills {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 11%;
+
+    .skill-box {
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        background-color: white;
+        margin: 15px 0;
+        text-align: center;
+        width: 340px;
+        height: 120px;
+        line-height: 120px;
+        @include box-shadow(0px 5px 20px 0px rgba(67, 76, 172, 0.3));
+    }
+}
+
+
+.rec-large {
+    //background-image: linear-gradient(to bottom, #6a11cb 0%, #2575fc 100%);
+    background-image: url('../img/codingvideo.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    width: 700px;
+    position: absolute;
+    top: -33px;
+    left: 25px;
+    z-index: -1;
+}
+.line-2 {
+    height: 3px;
+    width: 120px;
+    background-color: $main-black;
+    position: absolute;
+    top: 28px;
+    left: 60px;
+}
+
+/**
+ * ----------------------------------------
+ * Small devices media query
+ * ----------------------------------------
+ */
+@include mediaSm {
+    .left {
+        height: 60vh;
+        margin-top: 0 !important;
+
+        .rec-large {
+            top: 0px;
+            left: -30px;
+            height: 297px;
+            width: 364px;
+        }
+
+        h1 {
+            @include font-size(42px);
+            left: -3px;
+        }
+    }
+
+    .skills {
+        padding-left: 0;
+    }
+}
+
+
+@for $i from 1 to 5 {
+    .skill-box:nth-child(#{$i}) {
+        @include animation(slide-in-right $i * 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both);
+    }
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-in-right
+ * ----------------------------------------
+ */
+
+@include keyframes(slide-in-right) {
+    0% {
+        -webkit-transform: translateX(1000px);
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@include keyframes(text-focus-in) {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@include keyframes(slide-in-left) {
+    0% {
+        -webkit-transform: translateX(-1000px);
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

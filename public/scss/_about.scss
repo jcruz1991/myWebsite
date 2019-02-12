@@ -1,0 +1,88 @@
+#about {
+
+    .about-media,
+    .about-content {
+        flex: 1;
+    }
+
+    .about-media {
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+
+        .about-img {
+            background: url('../img/girl-people-landscape-sun-38554.jpeg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 500px auto;
+            position: relative;
+            width: 500px;
+            height: 600px;
+        }
+    }
+
+    .about-content {
+        position: relative;
+
+        .about-skills {
+            @include flexbox();
+            @include flex-wrap(wrap);
+            @include flex-direction(row);
+            position: relative;
+
+            .about-skils-header {
+                display: block;
+                width: 100%;
+
+                .rec {
+                    width: 212px;
+                    height: 28px;
+                    background: linear-gradient(to bottom, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+                }
+            }
+
+            svg {
+                width: 45px;
+                height: 45px;
+                margin: 0 12px;
+            }
+        }
+    }
+}
+
+/**
+ * ----------------------------------------
+ * Small devices media query
+ * ----------------------------------------
+ */
+@include mediaSm {
+    #about {
+        .about-media {
+            .about-img {
+                height: 400px;
+                background-size: contain;
+            }
+        }
+
+        .about-content {
+            padding-top: 15%;
+
+            .about-skills {
+                margin-top: 12%;
+                text-align: center;
+
+                .about-skils-header {
+                    .rec {
+                        height: 14px;
+                        top: 18px;
+                        left: 65px;
+                    }
+                }
+
+                svg {
+                    height: 70px;
+                }
+            }
+        }
+    }
+}

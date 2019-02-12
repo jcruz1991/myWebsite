@@ -1,0 +1,33 @@
+nav {
+    position: fixed;
+    top: 50px;
+    left: 5%;
+    line-height: 50px;
+    width: 100%;
+
+    a {
+        font-weight: 500;
+        color: $main-black;
+    }
+
+    .rec {
+        background-color: $main-blue;
+        display: inline-block;
+        width: 7px;
+        height: 14px;
+        margin-right: -3px;
+    }
+
+    .nav-right {
+        position: fixed;
+        right: 5%;
+        top: 50px;
+
+        a { 
+            color: $main-blue;
+            img {
+                vertical-align: text-bottom;
+            }
+        }
+    }
+}
