@@ -1,14 +1,10 @@
 $(document).ready(function () {
     const btnLoad = document.getElementById('btn-load');
-    const btnSend = document.getElementById('btn-send');
 
     btnLoad.addEventListener('click', function () {
         console.log('bnt-load clicked');
     });
 
-    btnSend.addEventListener('click', function () {
-        console.log('bnt-send clicked');
-    });
 
     $.ajax({
         type: 'GET',
@@ -39,6 +35,5 @@ $(document).ready(function () {
                 </div>
           </div>`
         );
-        console.log(item);
     }
 });

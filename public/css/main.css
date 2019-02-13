@@ -315,7 +315,8 @@ nav {
 
 #about .about-media,
 #about .about-content {
-  flex: 1; }
+  width: 100%;
+  height: 100%; }
 
 #about .about-media {
   display: -webkit-box;
@@ -336,13 +337,21 @@ nav {
     background: url("../img/girl-people-landscape-sun-38554.jpeg");
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 500px auto;
+    background-size: contain;
     position: relative;
-    width: 500px;
-    height: 600px; }
+    width: 300px;
+    height: 400px; }
 
 #about .about-content {
   position: relative; }
+  #about .about-content h1,
+  #about .about-content h2,
+  #about .about-content p {
+    text-align: center; }
+  #about .about-content h1 {
+    padding-top: 3%; }
+  #about .about-content p {
+    padding: 1% 30% 2% 30%; }
   #about .about-content .about-skills {
     display: -webkit-box;
     display: -moz-box;
@@ -357,13 +366,26 @@ nav {
     -moz-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
     position: relative; }
     #about .about-content .about-skills .about-skils-header {
       display: block;
-      width: 100%; }
+      width: 100%;
+      padding: 0 0 4% 0; }
       #about .about-content .about-skills .about-skils-header .rec {
         width: 212px;
         height: 28px;
+        top: 2%;
+        left: 33%;
+        -moz-transform: translate(50%, 50%);
+        -o-transform: translate(50%, 50%);
+        -ms-transform: translate(50%, 50%);
+        -webkit-transform: translate(50%, 50%);
+        transform: translate(50%, 50%);
         background: linear-gradient(to bottom, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%); }
     #about .about-content .about-skills svg {
       width: 45px;
@@ -381,45 +403,35 @@ nav {
     background-size: contain; }
   #about .about-content {
     padding-top: 15%; }
+    #about .about-content p {
+      padding: 1% 5% 2% 5%; }
     #about .about-content .about-skills {
       margin-top: 12%;
       text-align: center; }
       #about .about-content .about-skills .about-skils-header .rec {
         height: 14px;
-        top: 18px;
-        left: 65px; }
+        top: 11px;
+        left: -40px; }
       #about .about-content .about-skills svg {
         height: 70px; } }
 
-.section2 .left .rec {
-  background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
-  height: 260px;
-  width: 500px;
-  top: -139px;
-  left: 100px; }
-
-.section2 .left .arrow {
-  position: absolute;
-  right: -54px;
-  top: -143px; }
-
-.work .header-container {
+#work .header-container {
   width: 100%;
   position: relative;
   text-align: right;
   margin-bottom: 175px; }
-  .work .header-container h1 {
+  #work .header-container h1 {
     position: absolute;
     top: 0;
     right: 355px; }
-  .work .header-container .rec {
+  #work .header-container .rec {
     background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
     width: 306px;
     height: 64px;
     top: 0px;
     right: 254px; }
 
-.work .work-portfolio-container {
+#work .work-portfolio-container {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -444,7 +456,7 @@ nav {
   -moz-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row; }
-  .work .work-portfolio-container .item {
+  #work .work-portfolio-container .item {
     width: 100%;
     height: 500px;
     display: grid;
@@ -452,18 +464,18 @@ nav {
     grid-template-areas: "content image";
     grid-gap: 0;
     padding-top: 5%; }
-    .work .work-portfolio-container .item-image {
+    #work .work-portfolio-container .item-image {
       grid-area: image;
       display: inline-block;
       width: 100%;
       height: 100%;
       background-position: center center;
-      background-size: contain;
+      background-size: 100% 100%;
       background-repeat: no-repeat;
       -webkit-box-shadow: 0px 5px 20px 0px rgba(67, 76, 172, 0.3);
       -moz-box-shadow: 0px 5px 20px 0px rgba(67, 76, 172, 0.3);
       box-shadow: 0px 5px 20px 0px rgba(67, 76, 172, 0.3); }
-    .work .work-portfolio-container .item-content {
+    #work .work-portfolio-container .item-content {
       grid-area: content;
       width: 100%;
       height: 100%;
@@ -483,29 +495,23 @@ nav {
       position: relative;
       padding-top: 10%;
       padding-left: 8%; }
-      .work .work-portfolio-container .item-content .item-content-header {
+      #work .work-portfolio-container .item-content .item-content-header {
         margin-bottom: 6%; }
-      .work .work-portfolio-container .item-content .item-content-buttons {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        padding-left: 8%;
-        width: 100%; }
-        .work .work-portfolio-container .item-content .item-content-buttons a {
-          color: #000; }
-          .work .work-portfolio-container .item-content .item-content-buttons a:hover {
-            text-decoration: none; }
-        .work .work-portfolio-container .item-content .item-content-buttons .rec {
-          width: 78px;
-          height: 8px;
-          margin-top: -10px;
-          background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%); }
-        .work .work-portfolio-container .item-content .item-content-buttons:hover {
-          cursor: pointer; }
-          .work .work-portfolio-container .item-content .item-content-buttons:hover .rec {
-            background-image: linear-gradient(to top, #8368c2 0%, #f892db 100%); }
+      #work .work-portfolio-container .item-content .item-content-buttons a {
+        color: #000; }
+        #work .work-portfolio-container .item-content .item-content-buttons a:hover {
+          text-decoration: none; }
+      #work .work-portfolio-container .item-content .item-content-buttons .rec {
+        width: 78px;
+        height: 8px;
+        margin-top: -10px;
+        background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%); }
+      #work .work-portfolio-container .item-content .item-content-buttons:hover {
+        cursor: pointer; }
+        #work .work-portfolio-container .item-content .item-content-buttons:hover .rec {
+          background-image: linear-gradient(to top, #8368c2 0%, #f892db 100%); }
 
-.work #btn-load {
+#work #btn-load {
   margin: auto;
   margin-top: 5%; }
 
@@ -515,44 +521,49 @@ nav {
  * ----------------------------------------
  */
 @media screen and (max-width: 39.9375em) {
-  .work .work-portfolio-container .item {
+  #work .work-portfolio-container .item {
     grid-template-columns: 1fr;
-    grid-template-areas: "image content";
+    grid-template-areas: "image" "content";
     grid-auto-rows: 1fr 1fr;
     grid-gap: 0; }
-  .work .header-container h1 {
+  #work .work-portfolio-container .item-content {
+    padding-left: 0;
+    padding-top: 0; }
+  #work .work-portfolio-container .item-image {
+    height: 200px; }
+  #work .header-container h1 {
     right: 50%;
     top: 50%;
     transform: translate(50%, 50%); }
-  .work .header-container .rec {
+  #work .header-container .rec {
     height: 31px;
     top: 34px;
     right: 16px; } }
 
-.contact .right {
+#contact .right {
   margin-top: 150px; }
 
-.contact h1 {
+#contact h1 {
   position: absolute;
   left: 172px;
   top: 0px; }
 
-.contact p {
+#contact p {
   position: absolute;
   top: 159px;
   right: -14px; }
 
-.contact .rec {
+#contact .rec {
   background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
   width: 400px;
   height: 149px;
   left: 164px;
   top: -24px; }
 
-.contact form {
+#contact form {
   position: relative; }
-  .contact form input,
-  .contact form textarea {
+  #contact form input,
+  #contact form textarea {
     background: #FFFFFF;
     -webkit-box-shadow: 0px 5px 20px 0px rgba(67, 76, 172, 0.3);
     -moz-box-shadow: 0px 5px 20px 0px rgba(67, 76, 172, 0.3);
@@ -562,20 +573,25 @@ nav {
     display: block;
     font-weight: 200;
     letter-spacing: 1px; }
-  .contact form textarea {
+  #contact form textarea {
     overflow: hidden;
     resize: none; }
-  .contact form label {
+  #contact form label {
     display: block;
     font-weight: 900;
     text-transform: uppercase; }
-  .contact form input {
+  #contact form input {
     overflow: visible;
     height: 40px;
     margin-bottom: 3%; }
-  .contact form .button-container {
+  #contact form #contact-msg {
+    font-size: 12px;
+    font-size: 0.75rem;
+    margin: 2px 4px;
+    color: red; }
+  #contact form .button-container {
     width: 80%; }
-    .contact form .button-container button {
+    #contact form .button-container button {
       font-size: 18px;
       font-size: 1.125rem;
       float: right;
@@ -589,25 +605,27 @@ nav {
       -ms-transition: all ease-out 0.4s;
       -webkit-transition: all ease-out 0.4s;
       transition: all ease-out 0.4s; }
-      .contact form .button-container button:hover, .contact form .button-container button:focus {
+      #contact form .button-container button:hover, #contact form .button-container button:focus {
         -webkit-box-shadow: 0px 5px 20px 0px rgba(67, 76, 172, 0.9);
         -moz-box-shadow: 0px 5px 20px 0px rgba(67, 76, 172, 0.9);
         box-shadow: 0px 5px 20px 0px rgba(67, 76, 172, 0.9);
         cursor: pointer; }
 
 @media screen and (max-width: 39.9375em) {
-  .contact .left {
+  #contact .left {
     margin-bottom: -85px; }
-    .contact .left h1 {
+    #contact .left h1 {
       left: -27px; }
-    .contact .left p {
+    #contact .left p {
       right: 21px; }
-    .contact .left .rec {
+    #contact .left .rec {
       width: 300px;
       left: 7px; }
-  .contact .right {
+  #contact .right {
     margin-top: 0; }
-    .contact .right form input, .contact .right form textarea, .contact .right form .button-container {
+    #contact .right form input,
+    #contact .right form textarea,
+    #contact .right form .button-container {
       width: 100%; } }
 
 * {

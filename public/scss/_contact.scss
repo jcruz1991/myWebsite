@@ -1,4 +1,4 @@
-.contact {
+#contact {
 
     .right {
         margin-top: 150px;
@@ -55,6 +55,12 @@
             margin-bottom: 3%;
         }
 
+        #contact-msg {
+            @include font-size(12px);
+            margin: 2px 4px;
+            color: red;
+        }
+
         .button-container {
             width: 80%;
 
@@ -68,7 +74,8 @@
                 text-transform: uppercase;
                 @include transition(all ease-out 0.4s);
 
-                &:hover, &:focus {
+                &:hover,
+                &:focus {
                     @include box-shadow(0px 5px 20px 0px rgba(67, 76, 172, 0.9));
                     cursor: pointer;
                 }
@@ -78,15 +85,18 @@
 }
 
 @include mediaSm {
-    .contact {
+    #contact {
         .left {
             margin-bottom: -85px;
+
             h1 {
                 left: -27px;
             }
+
             p {
                 right: 21px;
             }
+
             .rec {
                 width: 300px;
                 left: 7px;
@@ -97,7 +107,10 @@
             margin-top: 0;
 
             form {
-                input, textarea, .button-container {
+
+                input,
+                textarea,
+                .button-container {
                     width: 100%;
                 }
             }

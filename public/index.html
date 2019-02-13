@@ -185,22 +185,8 @@
           </div>
         </div>
       </section><!-- End of About Section-->
-
-      <section class="section2">
-        <div class="left r">
-          <img class="arrow" src="./img/icon-arrow.png" alt="arrow icon">
-          <h1 class='white'>LET'S START A<br> PROJECT</h1>
-          <div class="rec"></div>
-        </div>
-        <div class="right l">
-          <div class="line2">
-            <h1>DESIGN &amp; <br> DEVELOPMENT</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores obcaecati dignissimos voluptatibus
-              ratione fuga, rerum.</p>
-          </div>
-        </div>
-      </section>
-      <section class="work">
+      <!-- Work Section-->
+      <section id="work">
         <div class="header-container">
           <h1>MY WORK</h1>
           <div class="rec"></div>
@@ -208,27 +194,29 @@
         <div class="work-portfolio-container">
         </div>
         <button id="btn-load">Load More</button>
-      </section>
-      <section class="contact">
+      </section><!-- End of Work Section-->
+      <!-- Contact Section-->
+      <section id="contact">
         <div class="left r">
           <h1>CONTACT ME</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam unde tempora ab sed, necessitatibus.</p>
           <div class="rec"></div>
         </div>
         <div class="right l">
-          <form action="/contact" method="POST">
+          <form>
             <label>Name</label>
-            <input type="text" name='name'>
+            <input type="text" id="input_name" name='name'>
             <label>Email</label>
-            <input type="email" name='email'>
+            <input type="email" id="input_email" name='email'>
             <label>Message</label>
-            <textarea name="message" cols="25" rows="10"></textarea>
+            <textarea name="message" id="input_message" cols="25" rows="10"></textarea>
+            <span id="contact-msg"></span>
             <div class="button-container">
               <button type='submit' id="btn-send">Send</button>
             </div>
           </form>
         </div>
-      </section>
+      </section><!-- End of Contact Section-->
     </div>
   </div>
   <!-- scripts -->
@@ -238,6 +226,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
 </body>
 
 </html>
