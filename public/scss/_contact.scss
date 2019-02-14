@@ -58,7 +58,14 @@
         #contact-msg {
             @include font-size(12px);
             margin: 2px 4px;
+        }
+
+        .error {
             color: red;
+        }
+
+        .success {
+            color: green;
         }
 
         .button-container {
