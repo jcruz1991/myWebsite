@@ -587,8 +587,11 @@ nav {
   #contact form #contact-msg {
     font-size: 12px;
     font-size: 0.75rem;
-    margin: 2px 4px;
+    margin: 2px 4px; }
+  #contact form .error {
     color: red; }
+  #contact form .success {
+    color: green; }
   #contact form .button-container {
     width: 80%; }
     #contact form .button-container button {
