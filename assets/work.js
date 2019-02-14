@@ -17,6 +17,12 @@ const work = [{
         'link': 'https://nandoandbianca.com/'
     },
     {
+        'header': 'Titan Bay',
+        'text': 'Technologies used: HTML5, CSS3, Semantic UI, jQuery, JavaScript, Konockout.js, Socket.io, Node.js and MongoDB, Heroku',
+        'image': '../img/titanbay.png',
+        'link': 'https://csufcraigslist.herokuapp.com/'
+    },
+    {
         'header': 'Dr. Luis G. Vargas DDS',
         'text': 'Technologies used: Bootstrap, HTML5, CSS3',
         'image': '../img/vargas.png',
