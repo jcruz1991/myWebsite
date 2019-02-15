@@ -34,3 +34,14 @@ nav {
         }
     }
 }
+
+@include mediaSm {
+    nav {
+        .nav-brand {
+            margin-left: 4%;
+        }
+        .nav-right {
+            margin-right: 4%;
+        }
+    }
+}

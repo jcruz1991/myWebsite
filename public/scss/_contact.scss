@@ -1,122 +1,124 @@
 #contact {
+    width: 100%;
 
-    .right {
-        margin-top: 150px;
+    .contact-header,
+    .contact-form {
+        flex: 1;
     }
 
-    h1 {
-        position: absolute;
-        left: 172px;
-        top: 0px;
-    }
-
-    p {
-        position: absolute;
-        top: 159px;
-        right: -14px;
-    }
-
-    .rec {
-        background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
-        width: 400px;
-        height: 149px;
-        left: 164px;
-        top: -24px;
-    }
-
-    form {
+    .contact-header {
         position: relative;
 
-        input,
-        textarea {
-            background: #FFFFFF;
-            @include box-shadow(0px 5px 20px 0px rgba(67, 76, 172, 0.3));
-            width: 80%;
-            padding: 2% 4%;
-            display: block;
-            font-weight: 200;
-            letter-spacing: 1px;
+        .rec {
+            background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+            width: 100%;
+            height: 149px;
+            top: -31px;
+            left: -10px;
         }
 
-        textarea {
-            overflow: hidden;
-            resize: none;
+        p {
+            padding-top: 15%;
         }
+    }
 
-        label {
-            display: block;
-            font-weight: 900;
-            text-transform: uppercase;
-        }
+    .contact-form {
+        padding-left: 5%;
 
-        input {
-            overflow: visible;
-            height: 40px;
-            margin-bottom: 3%;
-        }
+        form {
 
-        #contact-msg {
-            @include font-size(12px);
-            margin: 2px 4px;
-        }
+            input,
+            textarea {
+                background: #FFFFFF;
+                @include box-shadow(0px 5px 20px 0px rgba(67, 76, 172, 0.3));
+                width: 80%;
+                padding: 2% 4%;
+                display: block;
+                font-weight: 200;
+                letter-spacing: 1px;
+            }
 
-        .error {
-            color: red;
-        }
+            textarea {
+                overflow: hidden;
+                resize: none;
+            }
 
-        .success {
-            color: green;
-        }
-
-        .button-container {
-            width: 80%;
-
-            button {
-                @include font-size(18px);
-                float: right;
-                color: white;
-                background: blue;
-                padding: 10px 32px;
-                margin-top: 6%;
+            label {
+                display: block;
+                font-weight: 900;
                 text-transform: uppercase;
-                @include transition(all ease-out 0.4s);
+            }
 
-                &:hover,
-                &:focus {
-                    @include box-shadow(0px 5px 20px 0px rgba(67, 76, 172, 0.9));
-                    cursor: pointer;
+            input {
+                overflow: visible;
+                height: 40px;
+                margin-bottom: 3%;
+            }
+
+            #contact-msg {
+                @include font-size(12px);
+                margin: 2px 4px;
+            }
+
+            .error {
+                color: red;
+            }
+
+            .success {
+                color: green;
+            }
+
+            .button-container {
+                width: 80%;
+
+                button {
+                    @include font-size(18px);
+                    float: right;
+                    color: white;
+                    background: blue;
+                    padding: 10px 32px;
+                    margin-top: 6%;
+                    text-transform: uppercase;
+                    @include transition(all ease-out 0.4s);
+
+                    &:hover,
+                    &:focus {
+                        @include box-shadow(0px 5px 20px 0px rgba(67, 76, 172, 0.9));
+                        cursor: pointer;
+                    }
                 }
             }
         }
     }
 }
 
+/**
+ * ----------------------------------------
+ * Small Screen sizes
+ * ----------------------------------------
+ */
 @include mediaSm {
     #contact {
-        .left {
-            margin-bottom: -85px;
-
-            h1 {
-                left: 10px;
+        .contact-header {
+            .rec {
+                width: 300px;
             }
 
             p {
-                right: 21px;
-            }
-
-            .rec {
-                width: 300px;
-                left: 7px;
+                padding-top: 25%;
             }
         }
 
-        .right {
-            margin-top: 0;
+        .contact-form {
+            padding-left: 0;
 
             form {
 
                 input,
-                textarea,
+                textarea {
+                    width: 100%;
+                }
+
                 .button-container {
                     width: 100%;
                 }
