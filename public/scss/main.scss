@@ -64,6 +64,11 @@ a {
     @include font-size(18px);
     color: $main-gray;
     text-decoration: none;
+
+    &:hover {
+        color: inherit;
+        text-decoration: none;
+    }
 }
 
 button {

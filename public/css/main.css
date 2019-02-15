@@ -18,24 +18,26 @@
 *  
 */
 nav {
-  position: fixed;
-  top: 50px;
-  left: 5%;
+  position: relative;
   line-height: 50px;
   width: 100%; }
-  nav a {
+  nav .nav-brand {
     font-weight: 500;
-    color: #1F202B; }
-  nav .rec {
-    background-color: #5952FF;
+    color: #1F202B;
     display: inline-block;
-    width: 7px;
-    height: 14px;
-    margin-right: -3px; }
+    position: absolute;
+    top: 0;
+    left: 0; }
+    nav .nav-brand::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 13px;
+      background: #5952FF; }
   nav .nav-right {
-    position: fixed;
-    right: 5%;
-    top: 50px; }
+    position: absolute;
+    top: 0;
+    right: 0; }
     nav .nav-right a {
       color: #5952FF; }
       nav .nav-right a img {
@@ -334,13 +336,14 @@ nav {
   -ms-align-items: center;
   align-items: center; }
   #about .about-media .about-img {
-    background: url("../img/girl-people-landscape-sun-38554.jpeg");
+    background: url("../img/about-img.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
     position: relative;
     width: 300px;
-    height: 400px; }
+    height: 400px;
+    box-shadow: 0px 5px 20px 0px rgba(218, 162, 39, 0.3); }
 
 #about .about-content {
   position: relative; }
@@ -348,10 +351,12 @@ nav {
   #about .about-content h2,
   #about .about-content p {
     text-align: center; }
+  #about .about-content span {
+    font-weight: 600; }
   #about .about-content h1 {
     padding-top: 3%; }
   #about .about-content p {
-    padding: 1% 30% 2% 30%; }
+    padding: 1% 20% 2% 20%; }
   #about .about-content .about-skills {
     display: -webkit-box;
     display: -moz-box;
@@ -375,18 +380,18 @@ nav {
     #about .about-content .about-skills .about-skils-header {
       display: block;
       width: 100%;
-      padding: 0 0 4% 0; }
-      #about .about-content .about-skills .about-skils-header .rec {
-        width: 212px;
-        height: 28px;
-        top: 2%;
-        left: 33%;
-        -moz-transform: translate(50%, 50%);
-        -o-transform: translate(50%, 50%);
-        -ms-transform: translate(50%, 50%);
-        -webkit-transform: translate(50%, 50%);
-        transform: translate(50%, 50%);
-        background: linear-gradient(to bottom, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%); }
+      padding: 0 0 4% 0;
+      text-align: center; }
+      #about .about-content .about-skills .about-skils-header h2 {
+        display: inline-block; }
+      #about .about-content .about-skills .about-skils-header h2::after {
+        content: '';
+        display: block;
+        width: 110%;
+        height: 20px;
+        margin-top: -15px;
+        margin-left: -4px;
+        background: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%); }
     #about .about-content .about-skills svg {
       width: 45px;
       height: 45px;
@@ -618,7 +623,7 @@ nav {
   #contact .left {
     margin-bottom: -85px; }
     #contact .left h1 {
-      left: -27px; }
+      left: 10px; }
     #contact .left p {
       right: 21px; }
     #contact .left .rec {
@@ -691,6 +696,9 @@ a {
   font-size: 1.125rem;
   color: #8A8CA5;
   text-decoration: none; }
+  a:hover {
+    color: inherit;
+    text-decoration: none; }
 
 button {
   cursor: pointer;

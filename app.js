@@ -8,7 +8,9 @@ const PORT = process.env.PORT || 3001;
 
 // Add work folder
 const work = require('./assets/work');
-const { mail } = require('./assets/nodemailer');
+const {
+    mail
+} = require('./assets/nodemailer');
 
 // Express App Init
 const app = express();
@@ -56,11 +58,17 @@ app.post('/contact', (req, res) => {
         res.send(err);
     } else {
         const result = mail(name, email, message);
-        console.log('RESULT: ', result);
-        const success = {
-            'success': 'email has been sent'
+        if (result.Error) {
+            const nodemailerError = {
+                'nodemailerError': 'Could not send message. Please try again.'
+            }
+        } else {
+            console.log('RESULT: ', result);
+            const success = {
+                'success': 'Email has been sent'
+            }
+            res.send(success);
         }
-        res.send(success);
     }
 })
 

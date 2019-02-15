@@ -12,13 +12,14 @@
         @include align-items(center);
 
         .about-img {
-            background: url('../img/girl-people-landscape-sun-38554.jpeg');
+            background: url('../img/about-img.png');
             background-position: center center;
             background-repeat: no-repeat;
             background-size: contain;
             position: relative;
             width: 300px;
             height: 400px;
+            box-shadow: 0px 5px 20px 0px rgba(218, 162, 39, 0.3);
         }
     }
 
@@ -32,12 +33,16 @@
             text-align: center;
         }
 
+        span {
+            font-weight: 600;
+        }
+
         h1 {
             padding-top: 3%;
         }
 
         p {
-            padding: 1% 30% 2% 30%;
+            padding: 1% 20% 2% 20%;
         }
 
         .about-skills {
@@ -51,14 +56,20 @@
                 display: block;
                 width: 100%;
                 padding: 0 0 4% 0;
+                text-align: center;
 
-                .rec {
-                    width: 212px;
-                    height: 28px;
-                    top: 2%;
-                    left: 33%;
-                    @include transform(translate(50%, 50%));
-                    background: linear-gradient(to bottom, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+                h2 {
+                    display: inline-block;
+                }
+
+                h2::after {
+                    content: '';
+                    display: block;
+                    width: 110%;
+                    height: 20px;
+                    margin-top: -15px;
+                    margin-left: -4px;
+                    background: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
                 }
             }
 
