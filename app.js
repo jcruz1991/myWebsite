@@ -15,8 +15,6 @@ const {
 // Express App Init
 const app = express();
 app.use(express.json());
-
-
 // support parsing of application/json type post data
 app.use(bodyParser.json());
 
@@ -70,7 +68,7 @@ app.post('/contact', (req, res) => {
             res.send(success);
         }
     }
-})
+});
 
 app.listen(PORT, () => {
     console.log(`Listening on PORT: ${PORT}`)

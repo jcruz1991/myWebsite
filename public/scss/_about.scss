@@ -51,6 +51,7 @@
             @include flex-direction(row);
             @include justify-content(center);
             position: relative;
+            padding: 0 20%;
 
             .about-skils-header {
                 display: block;
@@ -77,6 +78,7 @@
                 width: 45px;
                 height: 45px;
                 margin: 0 12px;
+                margin-top: 2%;
             }
         }
     }

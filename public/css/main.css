@@ -408,7 +408,8 @@ nav {
     -ms-justify-content: center;
     justify-content: center;
     -ms-flex-pack: center;
-    position: relative; }
+    position: relative;
+    padding: 0 20%; }
     #about .about-content .about-skills .about-skils-header {
       display: block;
       width: 100%;
@@ -427,7 +428,8 @@ nav {
     #about .about-content .about-skills svg {
       width: 45px;
       height: 45px;
-      margin: 0 12px; }
+      margin: 0 12px;
+      margin-top: 2%; }
 
 /**
  * ----------------------------------------
@@ -549,11 +551,6 @@ nav {
         #work .work-portfolio-container .item-content .item-content-buttons:hover .rec {
           background-image: linear-gradient(to top, #8368c2 0%, #f892db 100%); }
 
-#work #btn-load {
-  margin: auto;
-  margin-top: 5%;
-  background: transparent; }
-
 /**
  * ----------------------------------------
  * Medium devices media query
@@ -579,11 +576,7 @@ nav {
   #work .header-container .rec {
     height: 31px;
     top: 34px;
-    right: 16px; }
-  #work #btn-load {
-    margin: 0;
-    margin-top: 0;
-    width: 100%; } }
+    right: 16px; } }
 
 #contact {
   width: 100%; }

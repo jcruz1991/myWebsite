@@ -1,11 +1,4 @@
 $(document).ready(function () {
-    const btnLoad = document.getElementById('btn-load');
-
-    btnLoad.addEventListener('click', function () {
-        console.log('bnt-load clicked');
-    });
-
-
     $.ajax({
         type: 'GET',
         url: '/work',
