@@ -6,20 +6,34 @@ const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 const gutil = require('gulp-util');
-const uglify = require('gulp-uglify');
+const minify = require('gulp-minify');
+const htmlmin = require('gulp-htmlmin');
 
-gulp.task('js', () => {
-    gulp
-        .src('./public/js/*.js')
+gulp.task('js', function() {
+    return gulp.src('./public/js/**/*.js')
+        .pipe(concat('main.js'))
+        .pipe(minify())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('./dist/public/js/'))
+        .on('error', function (err) {
+            gutil.log(gutil.colors.red('[Error]'), err.toString());
+        });
+});
+
+gulp.task('server', function() {
+    return gulp.src('./app.js')
         .pipe(
             babel({
                 presets: ['es2015']
             })
         )
-        .pipe(concat('main.min.js'))
-        .pipe(uglify())
+        .pipe(gulp.dest('./dist/'))
+});
+
+gulp.task('assets', function() {
+    return gulp.src('./assets/**/*.js')
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./public/js/'))
+        .pipe(gulp.dest('./dist/assets/'))
         .on('error', function (err) {
             gutil.log(gutil.colors.red('[Error]'), err.toString());
         });
@@ -37,6 +51,14 @@ gulp.task('css', function () {
             "uglyComments": true
         }))
         .pipe(gulp.dest('./public/css/'));
+});
+
+gulp.task('html', function() {
+    return gulp.src('./public/index.html')
+    .pipe(htmlmin({
+        collapseWhitespace: true
+    }))
+    .pipe(gulp.dest('./dist/public/'));
 });
 
 gulp.task('watch:sass', function () {

@@ -56,8 +56,9 @@
             }
 
             #contact-msg {
-                @include font-size(12px);
-                margin: 2px 4px;
+                @include font-size(14px);
+                font-weight: 900;
+                padding-top: 12px;
             }
 
             .error {

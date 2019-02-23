@@ -24,13 +24,11 @@ nav {
         position: absolute;
         top: 0;
         right: 0;
+        color: $main-blue;
+        cursor: pointer;
 
-        a {
-            color: $main-blue;
-
-            img {
-                vertical-align: text-bottom;
-            }
+        img {
+            vertical-align: text-bottom;
         }
     }
 }
@@ -40,6 +38,7 @@ nav {
         .nav-brand {
             margin-left: 4%;
         }
+
         .nav-right {
             margin-right: 4%;
         }

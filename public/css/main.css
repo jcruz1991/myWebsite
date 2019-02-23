@@ -37,11 +37,11 @@ nav {
   nav .nav-right {
     position: absolute;
     top: 0;
-    right: 0; }
-    nav .nav-right a {
-      color: #5952FF; }
-      nav .nav-right a img {
-        vertical-align: text-bottom; }
+    right: 0;
+    color: #5952FF;
+    cursor: pointer; }
+    nav .nav-right img {
+      vertical-align: text-bottom; }
 
 @media screen and (max-width: 39.9375em) {
   nav .nav-brand {
@@ -618,9 +618,10 @@ nav {
       height: 40px;
       margin-bottom: 3%; }
     #contact .contact-form form #contact-msg {
-      font-size: 12px;
-      font-size: 0.75rem;
-      margin: 2px 4px; }
+      font-size: 14px;
+      font-size: 0.875rem;
+      font-weight: 900;
+      padding-top: 12px; }
     #contact .contact-form form .error {
       color: red; }
     #contact .contact-form form .success {
@@ -675,7 +676,8 @@ nav {
   font-size: 100%; }
 
 html {
-  font-family: Avenir, sans-serif; }
+  font-family: Avenir, sans-serif;
+  scroll-behavior: smooth; }
 
 html,
 body {
