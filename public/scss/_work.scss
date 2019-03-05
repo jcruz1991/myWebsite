@@ -65,6 +65,12 @@
                 .item-content-header {
                     margin-bottom: 6%;
                 }
+                .item-content-text {
+                    @include font-size(14px);
+                }
+                .item-content-subtext {
+                    @include font-size(12px);
+                }
 
                 .item-content-buttons {
 

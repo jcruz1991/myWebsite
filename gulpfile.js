@@ -22,11 +22,6 @@ gulp.task('js', function() {
 
 gulp.task('server', function() {
     return gulp.src('./app.js')
-        .pipe(
-            babel({
-                presets: ['es2015']
-            })
-        )
         .pipe(gulp.dest('./dist/'))
 });
 

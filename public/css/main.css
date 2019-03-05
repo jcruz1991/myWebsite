@@ -537,6 +537,12 @@ nav {
       padding-right: 3%; }
       #work .work-portfolio-container .item-content .item-content-header {
         margin-bottom: 6%; }
+      #work .work-portfolio-container .item-content .item-content-text {
+        font-size: 14px;
+        font-size: 0.875rem; }
+      #work .work-portfolio-container .item-content .item-content-subtext {
+        font-size: 12px;
+        font-size: 0.75rem; }
       #work .work-portfolio-container .item-content .item-content-buttons a {
         color: #000; }
         #work .work-portfolio-container .item-content .item-content-buttons a:hover {
