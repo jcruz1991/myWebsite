@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const expressValidator = require('express-validator');
+const cors = require('cors');
+const compression = require('compression');
 require('dotenv').config();
 
 const PORT = process.env.PORT || 3001;
@@ -15,12 +17,16 @@ const {
 // Express App Init
 const app = express();
 app.use(express.json());
+// enable compression on all responses
+app.use(compression());
 // support parsing of application/json type post data
 app.use(bodyParser.json());
+// enable all cors request
+app.use(cors());
 
 //support parsing of application/x-www-form-urlencoded post data
 app.use(bodyParser.urlencoded({
-    extended: false
+    extended: true
 }));
 
 app.use(expressValidator());
