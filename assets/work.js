@@ -1,4 +1,13 @@
-const work = [{
+const work = [
+    {
+        'name': 'natural-beeauty',
+        'header': 'Natural Beeauty',
+        'text': "Created and designed website by using underscores as base theme. Implemneted Woocommerce into website and Deployed using DitialOcean.",
+        'subtext': 'Technologies used: Wordpress, HTML5, CSS3, Gulp, Javascript, PHP, Digital Ocean, Apache',
+        'image': '../img/naturalbeeauty.png',
+        'link': 'https://naturalbeeauty.com/'
+    },
+    {
         'name': 'acacia-dance-floor',
         'header': 'Acacia Dance Floor',
         'text': "Designed website using Adobe XD and deoypled using Node.js and DigitalOcean. Added SSL certificate using Let's ENcrypt and implemented SEO practices to imporve search engine results.",

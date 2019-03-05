@@ -154,7 +154,8 @@ $(document).ready(function () {
                 </div>
                 <div class="item-content">
                     <h1 class="item-content-header">${item.header}</h1>
-                    <p class="item-content-text">${item.text}.</p>
+                    <p class="item-content-text">${item.text}</p>
+                    <p class="item-content-subtext">${item.subtext}.</p>
                     <div class="item-content-buttons">
                         <a href="${item.link}" target="_blank">
                             <span class="btn-visit">Visit Site</span>
@@ -162,7 +163,7 @@ $(document).ready(function () {
                         </a>
                     </div>
                 </div>
-          </div>`
+            </div>`
         );
     }
 });

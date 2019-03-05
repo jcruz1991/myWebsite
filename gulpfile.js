@@ -8,12 +8,14 @@ const concat = require('gulp-concat');
 const gutil = require('gulp-util');
 const minify = require('gulp-minify');
 const htmlmin = require('gulp-htmlmin');
+const imagemin = require('gulp-imagemin');
 
 gulp.task('js', function() {
     return gulp.src('./public/js/**/*.js')
         .pipe(concat('main.js'))
         .pipe(minify())
         .pipe(sourcemaps.write())
+        .pipe(gulp.dest('./public/js'))
         .pipe(gulp.dest('./dist/public/js/'))
         .on('error', function (err) {
             gutil.log(gutil.colors.red('[Error]'), err.toString());
@@ -45,7 +47,8 @@ gulp.task('css', function () {
         .pipe(uglifycss({
             "uglyComments": true
         }))
-        .pipe(gulp.dest('./public/css/'));
+        .pipe(gulp.dest('./public/css/'))
+        .pipe(gulp.dest('./dist/public/css/'));
 });
 
 gulp.task('html', function() {
@@ -54,6 +57,12 @@ gulp.task('html', function() {
         collapseWhitespace: true
     }))
     .pipe(gulp.dest('./dist/public/'));
+});
+
+gulp.task('images', function() {
+	return gulp.src('./public/img/*')
+		.pipe(imagemin())
+		.pipe(gulp.dest('./dist/public/img'))
 });
 
 gulp.task('watch:sass', function () {

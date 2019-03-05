@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "deploy": "node ./dist/app.js"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +27,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^3.0.1",
     "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^5.0.3",
     "gulp-minify": "^3.1.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
