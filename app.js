@@ -76,6 +76,10 @@ app.post('/contact', (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`Listening on PORT: ${PORT}`)
+// app.listen(PORT, () => {
+//     console.log(`Listening on PORT: ${PORT}`)
+// });
+
+app.listen(PORT, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
