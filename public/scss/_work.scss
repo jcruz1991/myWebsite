@@ -30,11 +30,11 @@
         @include align-items(center);
         @include flex-wrap(wrap);
         @include flex-direction(row);
-
+ 
         .item {
             width: 100%;
             min-height: 400px;
-            display: grid;
+            @include grid();
             grid-template-columns: 40% 1fr;
             grid-template-areas: "content image";
             grid-gap: 0;
