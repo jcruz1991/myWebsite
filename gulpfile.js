@@ -3,7 +3,6 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var uglifycss = require('gulp-uglifycss');
 const sourcemaps = require('gulp-sourcemaps');
-const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 const gutil = require('gulp-util');
 const minify = require('gulp-minify');
@@ -15,7 +14,6 @@ gulp.task('js', function() {
         .pipe(concat('main.js'))
         .pipe(minify())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./public/js'))
         .pipe(gulp.dest('./dist/public/js/'))
         .on('error', function (err) {
             gutil.log(gutil.colors.red('[Error]'), err.toString());

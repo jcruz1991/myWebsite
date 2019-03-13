@@ -134,39 +134,6 @@ function addInitalCSS(key) {
         message.style.boxShadow = initalBoxShadow;
     }
 }
-$(document).ready(function () {
-    $.ajax({
-        type: 'GET',
-        url: '/work',
-        success: function (items) {
-            items.forEach((item) => {
-                constructItem(item);
-            });
-
-        }
-    });
-
-    function constructItem(item) {
-        $('.work-portfolio-container').append(
-            `
-            <div class="item">
-                <div class="item-image" style="background-image: url(${item.image})">
-                </div>
-                <div class="item-content">
-                    <h1 class="item-content-header">${item.header}</h1>
-                    <p class="item-content-text">${item.text}</p>
-                    <p class="item-content-subtext">${item.subtext}.</p>
-                    <div class="item-content-buttons">
-                        <a href="${item.link}" target="_blank">
-                            <span class="btn-visit">Visit Site</span>
-                            <div class="rec"></div>
-                        </a>
-                    </div>
-                </div>
-            </div>`
-        );
-    }
-});
 const navContactBtn = document.getElementById('nav-contact-btn');
 
 navContactBtn.addEventListener('click', function () {
@@ -176,6 +143,9 @@ navContactBtn.addEventListener('click', function () {
         left: 0,
         behavior: 'smooth'
     });
+});
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip();
 });
 /*
  * validate.js 2.0.1
@@ -799,3 +769,36 @@ navContactBtn.addEventListener('click', function () {
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = FormValidator;
 }
+$(document).ready(function () {
+    $.ajax({
+        type: 'GET',
+        url: '/work',
+        success: function (items) {
+            items.forEach((item) => {
+                constructItem(item);
+            });
+
+        }
+    });
+
+    function constructItem(item) {
+        $('.work-portfolio-container').append(
+            `
+            <div class="item">
+                <div class="item-image" style="background-image: url(${item.image})">
+                </div>
+                <div class="item-content">
+                    <h1 class="item-content-header">${item.header}</h1>
+                    <p class="item-content-text">${item.text}</p>
+                    <p class="item-content-subtext">${item.subtext}.</p>
+                    <div class="item-content-buttons">
+                        <a href="${item.link}" target="_blank">
+                            <span class="btn-visit">Visit Site</span>
+                            <div class="rec"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>`
+        );
+    }
+});
